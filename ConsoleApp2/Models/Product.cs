@@ -10,7 +10,7 @@ namespace ConsoleApp2.Models
 
         public void NewId()
         {
-            Id = new Guid();
+            Id = Guid.NewGuid();
         }
     }
 }

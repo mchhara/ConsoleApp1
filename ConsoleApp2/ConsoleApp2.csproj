@@ -44,14 +44,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\IEntity.cs" />
+    <Compile Include="Menu.cs" />
+    <Compile Include="Services\Implementation\MenuServices.cs" />
+    <Compile Include="Services\Implementation\SubMenuServices.cs" />
+    <Compile Include="Services\Interfaces\IEntity.cs" />
     <Compile Include="Models\Money.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Quote.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Implementation\RepositoryService.cs" />
+    <Compile Include="Services\Interfaces\IMenuServices.cs" />
+    <Compile Include="Services\Interfaces\IQuoteTotalPriceCalculation.cs" />
     <Compile Include="Services\Interfaces\IRepositoryService.cs" />
+    <Compile Include="Services\Implementation\QuoteTotalPriceCalculation.cs" />
+    <Compile Include="Services\Interfaces\ISubMenuServices.cs" />
+    <Compile Include="SubMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
