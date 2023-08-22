@@ -43,6 +43,13 @@ namespace ConsoleApp2.Services.Implementation
             }
         }
 
+        public T Get(Guid id) 
+        {
+            var entity = _entities
+                .FirstOrDefault(x => x.Id == id);
+            return entity;
+        }
+
         public IQueryable<T> Query()
         {
             return _entities.AsQueryable();

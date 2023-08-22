@@ -1,6 +1,7 @@
 ﻿using ConsoleApp2.Models;
 using ConsoleApp2.Services.Implementation;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,9 +14,11 @@ namespace ConsoleApp2
         static void Main(string[] args)
         {
             var productRepository = PrepareProductRepository();
+            var quoteRepository = new RepositoryService<Quote>();
 
             Console.WriteLine("WITAJ W SYSTEMIE ZARZĄDZANIA OFERTAMI SPRZEDAŻY");
 
+            Menu.RenderMenu(quoteRepository, productRepository);
             // Zadanie:
 
             // Należy dodać serwis zarządzający ofertą, który powinien mieć funkcjonalności pozwalające na:
@@ -41,6 +44,8 @@ namespace ConsoleApp2
             // Jeżeli jakiś Model lub część aktualnego rozwiązania wymaga modyfikacji do wykonania zadania to należy ją zmodyfikować
             // Jeżeli jakaś część zadania wymaga dodania jakiegoś komponentu, należy go dodać.
             // Należy pamiętać o dobrych praktykach
+
+
         }
 
         /// <summary>

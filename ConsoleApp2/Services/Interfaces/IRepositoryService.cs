@@ -10,5 +10,6 @@ namespace ConsoleApp2.Services.Interfaces
         void Remove(Guid id);
         void Update(T entity);
         IQueryable<T> Query();
+        T Get(Guid id);
     }
 }
